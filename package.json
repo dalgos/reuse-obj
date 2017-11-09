@@ -1,5 +1,5 @@
 {
-  "name": "ROM",
+  "name": "reuse-obj",
   "version": "0.0.1",
   "description": "It's object managing tool",
   "main": "index.js",

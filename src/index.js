@@ -1,7 +1,7 @@
 /**
- * ROM is Object managing tool
- * @param  {Object} base [description]
- * @return {Object}      [description]
+ * reuse-obj is Object managing tool
+ * @param  {Object} base base object
+ * @return {Object}      object
  */
 export default function (base) {
   const _base = Object.assign({}, base);

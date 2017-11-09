@@ -1,4 +1,4 @@
-# ROM (Rewritable Object Model)
+# reuse-obj
 
 It's object managing tool. You can update properties of base object, also get clone object too.
 
@@ -6,11 +6,11 @@ It's object managing tool. You can update properties of base object, also get cl
 ## Usage
 
 ```javascript
-import ROM from 'ROM';
+import reuseObj from 'reuseObj';
 
-const localState = ROM({ count: 1 }); // { count: 1 }
+const localState = reuseObj({ count: 1 }); // { count: 1 }
 const localStateClone = localState.clone(); // { count: 1 }
-const updatedLocalState = localState.update({ count: 2, name: 'ROM' }); // { count: 2 }
+const updatedLocalState = localState.update({ count: 2, name: 'reuseObj' }); // { count: 2 }
 
 ```
 
@@ -21,9 +21,9 @@ const updatedLocalState = localState.update({ count: 2, name: 'ROM' }); // { cou
 You can get cloned object from base object.
 
 ```javascript
-import ROM from 'ROM';
+import reuseObj from 'reuseObj';
 
-const localState = ROM({ count: 1 }); // { count: 1 }
+const localState = reuseObj({ count: 1 }); // { count: 1 }
 const localStateClone = localState.clone(); // { count: 1 }
 
 ```
@@ -34,11 +34,11 @@ const localStateClone = localState.clone(); // { count: 1 }
 You can only update the properties that base object has.
 
 ```javascript
-import ROM from 'ROM';
+import reuseObj from 'reuseObj';
 
 ...
 componentWillReceiveProps(nextProps) {
-  this.setState(prevState => ROM(prevState).update(nextProps));
+  this.setState(prevState => reuseObj(prevState).update(nextProps));
 }
 ...
 
